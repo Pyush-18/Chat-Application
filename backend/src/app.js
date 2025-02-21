@@ -21,7 +21,7 @@ import messageRoute from "../routes/message.route.js"
 app.use("/api/auth",authRoute)
 app.use("/api/messages",messageRoute)
 
-if(process.env.NODE_ENV === "production"){
+if(process.env.NODE_ENV === "development"){
     app.use(express.static(path.join(__dirname, "../frontend/dist")))
 }
 

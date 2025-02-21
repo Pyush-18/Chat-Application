@@ -48,7 +48,7 @@ export const login = asyncHandler(async(req, res) => {
 
     const options = {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        secure: process.env.NODE_ENV === "development",
         maxAge: 24*60*60*1000
     }
 
@@ -75,7 +75,7 @@ export const logout = asyncHandler(async(req, res) => {
 
     const options = {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        secure: process.env.NODE_ENV === "development",
         maxAge: 0
     }
 
