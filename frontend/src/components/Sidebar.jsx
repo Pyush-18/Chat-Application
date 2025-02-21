@@ -37,7 +37,9 @@ function Sidebar() {
           />
           <span className="text-sm">Show Online only</span>
         </label>
-        <span className="text-xs text-zinc-500">{onlineUsers?.length - 1} online</span>
+        <span className="text-xs text-zinc-500">
+          {onlineUsers?.length - 1} online
+        </span>
       </div>
 
       <div className="overflow-y-auto w-full py-3">
@@ -53,7 +55,7 @@ function Sidebar() {
           >
             <div className="relative mx-auto lg:mx-0">
               <img
-                src={user?.profilePic || "/avatar.png"}
+                src={user?.profilePic || "avatar.png"}
                 alt={user?.fullName}
                 className="size-12 object-cover rounded-full"
               />
@@ -71,12 +73,9 @@ function Sidebar() {
           </button>
         ))}
 
-{
-  filteredUsers?.length === 0 && (
-    <div className="text-center text-zinc-500 py-4">No online users</div>
-  )
-}
-
+        {filteredUsers?.length === 0 && (
+          <div className="text-center text-zinc-500 py-4">No online users</div>
+        )}
       </div>
     </aside>
   );
